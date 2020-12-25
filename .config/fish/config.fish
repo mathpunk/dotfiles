@@ -59,7 +59,7 @@ set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
 # Neo4j
-export NEO4J_HOME=/usr/local/opt/neo4j
+set NEO4J_HOME /usr/local/opt/neo4j
 
 # Protractor
 abbr pro "./node_modules/protractor/bin/protractor e2e/conf.js "
@@ -72,7 +72,7 @@ alias dockerrmv="docker volume rm (docker volume ls -qf dangling=true)"
 
 # direnv
 eval (direnv hook fish)
-export JAVA_HOME=(/usr/libexec/java_home)
+set JAVA_HOME (/usr/libexec/java_home)
 
 # SECRETS / ENV
 # =================================
