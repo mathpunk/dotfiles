@@ -40,6 +40,7 @@ abbr gl "git log --oneline --decorate --graph"
 abbr ys "yadm status"
 abbr ya "yadm add"
 abbr yc "yadm commit"
+abbr yp "yadm push"
 
 # other
 abbr yt "youtube-dl"
