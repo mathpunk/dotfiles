@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : query
+#key : query
+#contributor : Tom Henderson
+# --
+(db/defquery $0)

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+#name : spec
+#key : spec
+#contributor : Tom Henderson
+# --
+export class $1 extends AbstractSpec {
+
+  public run(): void {
+
+    describe('$2', () => {
+      $0
+    })
+  }
+}

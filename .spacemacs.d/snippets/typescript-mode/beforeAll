@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+#name : beforeAll
+#key : beforeAll
+#contributor : Tom Henderson
+# --
+beforeAll(async () => {
+  $1
+})
+
+$0

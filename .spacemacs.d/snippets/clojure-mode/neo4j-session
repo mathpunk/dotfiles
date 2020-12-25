@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+#name : neo4j-session
+#key : sess
+#contributor : Tom Henderson
+# --
+(with-open [session (db/get-session local-db)]
+  $0(seq ($1 session)))

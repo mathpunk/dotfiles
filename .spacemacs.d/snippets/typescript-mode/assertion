@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+#name : assertion
+#key : assertion
+#contributor : Tom Henderson
+# --
+it('$1', async () => {
+  $0
+})

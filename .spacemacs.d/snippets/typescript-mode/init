@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+#name : furk
+#key : furk
+#contributor : Tom Henderson
+# --
+(with-open [session (db/get-session local-db)]
+$0(seq ($1 session)))
