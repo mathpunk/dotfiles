@@ -1,9 +1,7 @@
-alias cfg='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
-
 # config
 set fish_greeting ""
 fish_vi_key_bindings
-set -Ux EDITOR 'emacsclient -a "" -c'
+set -Ux EDITOR 'emacsclient -a "" -c' # this might work funny with no x server
 
 # editor
 alias e='emacsclient -a "" -c'
@@ -12,19 +10,18 @@ alias e='emacsclient -a "" -c'
 
 # git
 abbr gs "git status"
+abbr ga "git add"
+abbr gc "git commit"
+abbr gcm "git commit -m"
 abbr gb "git branch"
 abbr gf "git fetch"
 abbr gco "git checkout"
 abbr gcb "git checkout -b"
 abbr gl "git log --oneline --decorate --graph"
-abbr ga "git add"
-abbr gc "git commit"
-abbr gcm "git commit -m"
 
-# tw
-abbr t "task"
-abbr ta "task add"
-abbr tl "task list"
+abbr ys "yadm status"
+abbr ya "yadm add"
+abbr yc "yadm commit"
 
 # other
 abbr yt "youtube-dl"
@@ -87,4 +84,4 @@ source ~/.secrets.sh
 ssh-add ~/.ssh/id_logicgate
 
 # aws
-set AWS_PROFILE logicgate # or is it LGi qf qf?
+set AWS_PROFILE logicgate # or is it LG?
