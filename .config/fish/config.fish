@@ -5,9 +5,9 @@ function is-mac
 end
 
 if is-mac
-    set OS "MacOS"
+    set -x OS "MacOS"
 else
-    set OS "Unknown"
+    set -x OS "Unknown"
 end
 
 function is-work-machine
@@ -59,7 +59,7 @@ set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
 # Neo4j
-set NEO4J_HOME /usr/local/opt/neo4j
+set -x NEO4J_HOME /usr/local/opt/neo4j
 
 # Protractor
 abbr pro "./node_modules/protractor/bin/protractor e2e/conf.js "
@@ -72,7 +72,7 @@ alias dockerrmv="docker volume rm (docker volume ls -qf dangling=true)"
 
 # direnv
 eval (direnv hook fish)
-set JAVA_HOME (/usr/libexec/java_home)
+set -x JAVA_HOME (/usr/libexec/java_home)
 
 # SECRETS / ENV
 # =================================
@@ -81,4 +81,4 @@ ssh-add ~/.ssh/id_logicgate
 ssh-add ~/.ssh/id_mathpunk
 
 # aws
-set AWS_PROFILE logicgate # or is it LG?
+set -x AWS_PROFILE logicgate # or is it LG?
