@@ -87,4 +87,4 @@ source ~/.secrets.sh
 ssh-add ~/.ssh/id_logicgate
 
 # aws
-set AWS_PROFILE logicgate # or is it LG?
+set AWS_PROFILE logicgate # or is it LGi qf qf?

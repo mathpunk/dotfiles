@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Tom Henderson
+	email = tom.henderson@logicgate.com
+# Please adapt and uncomment the following lines:
+#	name = Tom Henderson
+#	email = tomhenderson@Toms-MacBook-Pro.local

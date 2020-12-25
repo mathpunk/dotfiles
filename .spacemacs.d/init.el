@@ -382,9 +382,9 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-gruvbox-light
+   dotspacemacs-themes '(doom-sourcerer
+                         doom-gruvbox-light
                          doom-solarized-light
-                         doom-sourcerer
                          kaolin-valley-dark
                          doom-solarized-dark
                          spacemacs-light
@@ -508,7 +508,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
 
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
