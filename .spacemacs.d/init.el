@@ -1142,6 +1142,16 @@ before packages are loaded."
   (evil-define-key 'normal clojure-mode-map
     "zC" 'clojure-hack/toggle-comment-block
     "zO" (lambda () (interactive) (clojure-hack/toggle-comment-block 'open)))
+
+  (defun json->edn ()
+    "Convert the current region in emacs from JSON to EDN using Bork's Jet."
+    (interactive)
+    (shell-command-on-region (region-beginning)
+                             (region-end)
+                             "jet --pretty --keywordize keyword --from json --to edn"
+                             (current-buffer)
+                             t))
+  (spacemacs/set-leader-keys "de" 'json->edn)
   ;;
   ;;
   ;; Experiment: Start Clojure REPL with a specific profile
