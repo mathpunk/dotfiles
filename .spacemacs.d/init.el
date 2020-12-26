@@ -789,7 +789,7 @@ before packages are loaded."
   (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
   ;;
   ;; Snippets
-  (spacemacs/set-leader-keys "ir" 'helm-yas-create-snippet-on-region)
+  (spacemacs/set-leader-keys "ic" 'helm-yas-create-snippet-on-region)
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ;; Autosave
