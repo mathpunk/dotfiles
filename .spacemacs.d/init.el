@@ -1617,8 +1617,17 @@ before packages are loaded."
   ;; End of Neotree configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;; IEdit (Multiple Cursors) #insertion
+  ;; #insertion: multiple cursors
   (spacemacs/set-leader-keys "iC" 'evil-iedit-state/iedit-mode)
+  (spacemacs/set-leader-keys "iC" 'evil-iedit-state/iedit-mode)
+
+  ;; #visual regions
+  ;; (spacemacs/set-leader-keys "v!" 'shell-command-on-region)
+  ;; (spacemacs/set-leader-keys "ve" 'er/expand-region)
+  ;; TODO: Ask #clojurians/spacemacs what's what with this "Key sequence v e starts with non-prefix key v"
+
+  ;; shell commands
+  (spacemacs/set-leader-keys "|" 'shell-command-on-region)
 
   )   ;; End of dot-spacemacs/user-config
 
