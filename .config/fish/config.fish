@@ -1,5 +1,5 @@
 # GOAL: Platform independent configuration. This might be the wrong abstraction layer but let's try it
-set PLATFORM (uname -a|bb -i '(-> *input* first (str/split #" ") first)')
+# set PLATFORM (uname -a|bb -i '(-> *input* first (str/split #" ") first)')
 
 # Defaults
 # --------
