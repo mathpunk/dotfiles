@@ -754,6 +754,17 @@ before packages are loaded."
   ;;
 
   ;; "Yet Another Dotfiles Manager" (abbr'd `dot`) bindings
+  ;; ---------------------------------------------------------
+  (with-eval-after-load 'tramp
+    (setenv "SHELL" "/usr/bin/bash")
+    (add-to-list 'tramp-methods
+                 '("yadm"
+                   (tramp-login-program "yadm")
+                   (tramp-login-args (("enter")))
+                   (tramp-login-env (("SHELL") ("/bin/sh")))
+                   (tramp-remote-shell "/bin/sh")
+                   (tramp-remote-shell-args ("-c")))))
+
   (defun yadm-status ()
     (interactive)
     (magit-status "/yadm::"))
@@ -903,15 +914,9 @@ before packages are loaded."
           ;; ("~/projects/" . 2)
           ))
 
-  (with-eval-after-load 'tramp
-    (setenv  "SHELL" "/usr/bin/bash")
-    (add-to-list 'tramp-methods
-                 '("yadm"
-                   (tramp-login-program "yadm")
-                   (tramp-login-args (("enter")))
-                   (tramp-login-env (("SHELL") ("/usr/bin/bash")))
-                   (tramp-remote-shell "/usr/bin/bash")
-                   (tramp-remote-shell-args ("-c")))))
+
+
+
 
   ;;
   ;; end of version control configuration
@@ -1623,8 +1628,6 @@ before packages are loaded."
 
   ;; IEdit (Multiple Cursors) #insertion
   (spacemacs/set-leader-keys "iC" 'evil-iedit-state/iedit-mode)
-
-
 
   )   ;; End of dot-spacemacs/user-config
 
