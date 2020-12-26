@@ -360,7 +360,7 @@ It should only modify the values of Spacemacs settings."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    dotspacemacs-startup-lists '((recents . 9)
-                                (todos . 9)
+                                ;; (todos . 9)
                                 (projects . 7)
                                 (bookmarks . 24))
 
@@ -881,6 +881,16 @@ before packages are loaded."
   ;;   :after magit
   ;;   :config (magithub-feature-autoinject t))
   ;;
+
+  (defun magit-kill-buffers ()
+    "Restore window configuration and kill all Magit buffers."
+    (interactive)
+    (let ((buffers (magit-mode-get-buffers)))
+      (magit-restore-window-configuration)
+      (mapc #'kill-buffer buffers)))
+  (spacemacs/set-leader-keys "gk" #'magit-kill-buffers magit-status-mode-map)
+
+
   ;; Use Spacemacs as the $EDITOR (or $GIT_EDITOR) for git commits messages
   ;; when using git commit on the command line
   (global-git-commit-mode t)
