@@ -893,15 +893,6 @@ before packages are loaded."
   ;;   :config (magithub-feature-autoinject t))
   ;;
 
-  (defun magit-kill-buffers ()
-    "Restore window configuration and kill all Magit buffers."
-    (interactive)
-    (let ((buffers (magit-mode-get-buffers)))
-      (magit-restore-window-configuration)
-      (mapc #'kill-buffer buffers)))
-  (spacemacs/set-leader-keys "gk" #'magit-kill-buffers magit-status-mode-map)
-
-
   ;; Use Spacemacs as the $EDITOR (or $GIT_EDITOR) for git commits messages
   ;; when using git commit on the command line
   (global-git-commit-mode t)
