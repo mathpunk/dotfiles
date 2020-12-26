@@ -1415,38 +1415,6 @@ before packages are loaded."
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; Workarounds and bug fixes - temporary hopefully
-  ;;
-  ;; Undo history size limit, triggering garbage collection
-  ;; Updating all defaults by a power of 10 (adding another zero at the end)
-  ;; default in spacemacs is 80000
-  ;; (setq undo-limit 400000)
-  ;;
-  ;; default in spacemacs is 120000
-  ;; (setq undo-strong-limit 6000000)
-  ;;
-  ;; default in spacemacs is 12000000
-  ;; (setq undo-strong-limit 60000000)
-  ;;
-  ;;
-  ;; disable undo-tree as it seems to be loosing history
-  ;; (global-undo-tree-mode -1)
-  ;;
-  ;; TODO: try explicitly saving history
-  ;; (setq undo-tree-auto-save-history t)
-  ;;
-  ;; TODO: try setting undo-tree tmp files location
-  ;; (setq undo-tree-history-directory-alist '(("." . "~/var/emacs/undo")))
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; Which-key now using a different sorting order for keybindings
-  ;; which-key-sort-order 'which-key-prefix-then-key-order
-  ;; https://github.com/syl20bnr/spacemacs/commit/ab3511cfb55aadaa7a13be03356917cca3071c02
-  ;; (setq which-key-sort-order 'which-key-key-order-alpha)
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Spell checking
@@ -1524,12 +1492,6 @@ before packages are loaded."
   ;; (setq cider-repl-display-help-banner "Evaluate in the source code buffer for fun and profit!")
 
 
-  ;; Merged into develop
-  ;; (spacemacs/set-leader-keys-for-major-mode 'clojure "ei" 'cider-interrupt)
-
-  ;; Experiment: Turn on all font locking options for Clojure
-  ;; (setq cider-font-lock-dynamically t)
-  ;;
   ;; configure clojurescript-jack-in to use the helper functions provided by lein-figwheel template
   ;; https://github.com/bhauman/lein-figwheel
   ;; fig-start will start figwheel and compile the clojurescript application
@@ -1649,31 +1611,9 @@ before packages are loaded."
   ;; End of Neotree configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;; IEdit (Multiple Cursors) #insertion
+  (spacemacs/set-leader-keys "iC" 'evil-iedit-state/iedit-mode)
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; old-school emacs style keybindings that i am replacing with nicer spacemacs alternatives
-  ;;
-  ;; jr0cket: text scaling keybindings - use spc z x =/-
-  ;; (define-key global-map (kbd "c-+") 'text-scale-increase)
-  ;; (define-key global-map (kbd "c--") 'text-scale-decrease)
-  ;;
-  ;; smartparens keybindings - use lisp-state, spc k menu instead
-  ;; (define-key global-map (kbd "c-)") 'sp-forward-slurp-sexp)
-  ;; (define-key global-map (kbd "c-(") 'sp-backward-slurp-sexp)
-  ;; (define-key global-map (kbd "m-)") 'sp-forward-barf-sexp)
-  ;; (define-key global-map (kbd "m-(") 'sp-backward-barf-sexp)
-  ;;
-  ;; jr0cket: keybindings for cycling buffers
-  ;; use spc b n and spc b n instead
-  ;; (global-set-key [c-prior] 'previous-buffer)
-  ;; (global-set-key [c-next] 'next-buffer)
-  ;;
-  ;; jr0cket: remap multiple cursors to a pattern that is easier to remember
-  ;; learn iedit mode instead (its fantastic)
-  ;; (define-key global-map (kbd "c-c m c") 'mc/edit-lines)
-  ;;
-  ;; end of old-school bindings
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
   )   ;; End of dot-spacemacs/user-config
