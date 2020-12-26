@@ -73,6 +73,7 @@ This function should only modify configuration layer settings."
 
      ;; https://develop.spacemacs.org/layers/+lang/clojure/README.html
      (clojure :variables
+              clojure-backend 'cider
               clojure-toplevel-inside-comment-form t
               cider-overlays-use-font-lock t
               clojure-enable-linters 'clj-kondo
