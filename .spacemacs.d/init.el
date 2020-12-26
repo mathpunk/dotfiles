@@ -752,6 +752,14 @@ before packages are loaded."
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; User key bindings
   ;;
+
+  ;; yadm status
+  (defun yadm-status ()
+    (interactive)
+    (magit-status "/yadm::"))
+
+  (spacemacs/set-leader-keys "ys" 'yadm-status)
+
   ;; org-journal user keybinding
   ;; - create a new journal entry
   (spacemacs/set-leader-keys "oj" 'org-journal-new-entry)
