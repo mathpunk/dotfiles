@@ -827,12 +827,12 @@ before packages are loaded."
   ;; Set the files that are searched for writing tokens
   ;; by default ~/.authinfo will be used
   ;; and write a token in unencrypted format
-  (setq auth-sources '("~/.authinfo.gpg"))
+  ;; (setq auth-sources '("~/.authinfo.gpg"))
   ;;
   ;; Configure number of topics show, open and closed
   ;; use negative number to toggle the view of closed topics
   ;; using `SPC SPC forge-toggle-closed-visibility'
-  (setq  forge-topic-list-limit '(100 . -10))
+  ;; (setq  forge-topic-list-limit '(100 . -10))
   ;; set closed to 0 to never show closed issues
   ;; (setq  forge-topic-list-limit '(100 . 0))
   ;;
@@ -884,6 +884,17 @@ before packages are loaded."
         '(("~/.emacs.d"  . 0)
           ;; ("~/projects/" . 2)
           ))
+
+  (with-eval-after-load 'tramp
+    (setenv  "SHELL" "/bin/bash")
+    (add-to-list 'tramp-methods
+                 '("yadm"
+                   (tramp-login-program "yadm")
+                   (tramp-login-args (("enter")))
+                   (tramp-login-env (("SHELL") ("/bin/zsh")))
+                   (tramp-remote-shell "/bin/zsh")
+                   (tramp-remote-shell-args ("-c")))))
+
   ;;
   ;; end of version control configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
