@@ -50,3 +50,6 @@ set PATH $HOME/bin /$HOME/.nvm/versions/node/v10.10.0/bin /usr/local/bin /usr/bi
 # SECRETS / ENV
 # =================================
 source ~/.secrets.sh
+
+# rename Yet Another Dotfile Manager -- cute but not mnemonic
+abbr dot yadm

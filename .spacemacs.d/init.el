@@ -753,12 +753,12 @@ before packages are loaded."
   ;; User key bindings
   ;;
 
-  ;; yadm status
+  ;; "Yet Another Dotfiles Manager" (abbr'd `dot`) bindings
   (defun yadm-status ()
     (interactive)
     (magit-status "/yadm::"))
 
-  (spacemacs/set-leader-keys "ys" 'yadm-status)
+  (spacemacs/set-leader-keys "ds" 'yadm-status)
 
   ;; org-journal user keybinding
   ;; - create a new journal entry
