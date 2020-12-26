@@ -756,12 +756,12 @@ before packages are loaded."
   ;; "Yet Another Dotfiles Manager" (abbr'd `dot`) bindings
   ;; ---------------------------------------------------------
   (with-eval-after-load 'tramp
+    ;; https://github.com/TheLocehiliosan/yadm/blob/dd86c8a691deed7fb438b7ef07179040b0f05026/yadm.md
     (setenv "SHELL" "/usr/bin/bash")
     (add-to-list 'tramp-methods
                  '("yadm"
                    (tramp-login-program "yadm")
                    (tramp-login-args (("enter")))
-                   (tramp-login-env (("SHELL") ("/bin/sh")))
                    (tramp-remote-shell "/bin/sh")
                    (tramp-remote-shell-args ("-c")))))
 
