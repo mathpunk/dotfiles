@@ -24,10 +24,11 @@ abbr gcb "git checkout -b"
 abbr gl "git log --oneline --decorate --graph"
 
 # yadm
-abbr ys "yadm status"
-abbr ya "yadm add"
-abbr yc "yadm commit"
-abbr yp "yadm push"
+abbr dot yadm # rename Yet Another Dotfile Manager -- cute but not mnemonic
+abbr ds "yadm status"
+abbr da "yadm add"
+abbr dc "yadm commit"
+abbr dp "yadm push"
 
 # other
 abbr yt "youtube-dl"
@@ -50,6 +51,3 @@ set PATH $HOME/bin /$HOME/.nvm/versions/node/v10.10.0/bin /usr/local/bin /usr/bi
 # SECRETS / ENV
 # =================================
 source ~/.secrets.sh
-
-# rename Yet Another Dotfile Manager -- cute but not mnemonic
-abbr dot yadm
