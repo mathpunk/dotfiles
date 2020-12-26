@@ -904,13 +904,13 @@ before packages are loaded."
           ))
 
   (with-eval-after-load 'tramp
-    (setenv  "SHELL" "/bin/bash")
+    (setenv  "SHELL" "/usr/bin/bash")
     (add-to-list 'tramp-methods
                  '("yadm"
                    (tramp-login-program "yadm")
                    (tramp-login-args (("enter")))
-                   (tramp-login-env (("SHELL") ("/bin/zsh")))
-                   (tramp-remote-shell "/bin/zsh")
+                   (tramp-login-env (("SHELL") ("/usr/bin/bash")))
+                   (tramp-remote-shell "/usr/bin/bash")
                    (tramp-remote-shell-args ("-c")))))
 
   ;;
