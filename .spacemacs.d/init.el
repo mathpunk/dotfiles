@@ -1118,6 +1118,7 @@ before packages are loaded."
   ;; ;;
   ;; ;; Toggle view of a clojure `(comment ,,,) block'
   ;; ;;
+
   (defun clojure-hack/toggle-comment-block (arg)
     "Close all top level (comment) forms. With universal arg, open all."
     (interactive "P")
@@ -1163,6 +1164,19 @@ before packages are loaded."
   ;; (add-hook 'prog-mode-hook 'command-log-mode)
   ;; (add-hook 'text-mode-hook 'command-log-mode)
   ;;
+
+  (defun jet ()
+    "Highlight a region, call this, and makes repl output more readable/pasteable? https://github.com/borkdude/jet#emacs-integration"
+    (interactive)
+    (shell-command-on-region
+     (region-beginning)
+     (region-end)
+     "jet --pretty --edn-reader-opts '{:default tagged-literal}'"
+     (current-buffer)
+     t
+     "*jet error buffer*"
+     t))
+
   ;;
   ;; end of clojure configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
