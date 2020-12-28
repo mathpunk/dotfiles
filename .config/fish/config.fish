@@ -35,19 +35,10 @@ abbr yt "youtube-dl"
 
 # Path
 # =======
-set PATH $HOME/bin /$HOME/.nvm/versions/node/v10.10.0/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/opt/neo4j/bin $HOME/.nvm/versions/node/v10.10.0/lib/node_modules
-
-# NVM hacks
-# =========
+set PATH $HOME/bin  /usr/local/bin /usr/bin /bin /usr/sbin /sbin
 
 
-# Work
-# ====
-# if is-work-machine
-#    source ./work_config.fish
-# else
-# end
-
-# SECRETS / ENV
+# SECRETS
 # =================================
 source ~/.secrets.sh
+ssh-add ~/.ssh/id_mathpunk
