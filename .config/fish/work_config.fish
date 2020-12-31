@@ -1,3 +1,5 @@
+echo "i'm at work"
+
 function nvm
     bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 end
@@ -20,7 +22,9 @@ alias dockerrmv="docker volume rm (docker volume ls -qf dangling=true)"
 # direnv
 eval (direnv hook fish)
 set -x JAVA_HOME (/usr/libexec/java_home)
-ssh-add ~/.ssh/id_logicgate
 set -x AWS_PROFILE logicgate # or is it LG?
-
 set PATH $PATH /usr/local/opt/neo4j/bin $HOME/.nvm/versions/node/v10.10.0/lib/node_modules /$HOME/.nvm/versions/node/v10.10.0/bin
+
+if status is-login
+    ssh-add ~/.ssh/id_logicgate
+end

@@ -18,6 +18,7 @@ abbr ga "git add"
 abbr gc "git commit"
 abbr gcm "git commit -m"
 abbr gb "git branch"
+abbr gbm "git branch -m"
 abbr gf "git fetch"
 abbr gco "git checkout"
 abbr gcb "git checkout -b"
@@ -41,4 +42,16 @@ set PATH $HOME/bin  /usr/local/bin /usr/bin /bin /usr/sbin /sbin
 # SECRETS
 # =================================
 source ~/.secrets.sh
-ssh-add ~/.ssh/id_mathpunk
+
+if status is-login
+    ssh-add ~/.ssh/id_mathpunk
+end
+
+switch (uname)
+    case Linux
+        echo I\'m home!
+    case Darwin
+        source $HOME/.config/fish/work_config.fish
+    case '*'
+        echo Unknown platform! Cool!
+end
