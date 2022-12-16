@@ -1,0 +1,10 @@
+eval "$(direnv hook zsh)"
+
+for file in ~/lg/logicgate-sdn/.zshrc.d/*
+do
+  source "$file"
+  echo "$file"
+done
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
